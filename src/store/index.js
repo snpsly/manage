@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-
+import Cookie from 'js-cookie'
 Vue.use(Vuex);
 const state = {
   TabNavCollapse: false,
@@ -8,7 +8,8 @@ const state = {
   createdindex: '',
   tagpathto: '',
   userList: [],
-  userId: ''
+  userId: '',
+
 }
 const store = new Vuex.Store({
   state,
@@ -59,7 +60,7 @@ const store = new Vuex.Store({
       }
 
 
-    }
+    },
   },
   actions: {
     TabClick (context, action) {

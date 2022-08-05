@@ -21,7 +21,7 @@
       </span>
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item>个人信息</el-dropdown-item>
-        <el-dropdown-item>退出</el-dropdown-item>
+        <el-dropdown-item @click.native="edit">退出</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </div>
@@ -75,6 +75,9 @@ export default {
       if (!this.$route.path.includes(path)) {
         this.$router.push(path)
       }
+    },
+    edit() {
+      this.$router.push('/login')
     }
   }
 }
